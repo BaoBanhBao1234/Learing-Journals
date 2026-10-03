@@ -1,0 +1,21 @@
+1. What is a packet?
+- In networking, a packet is a small segment of a larger message. Data sent over computer networks, such as the Internet, is divided into packets. These packets are then recombined by the computer or device that receives them
+2. Why use packets?
+- The Internet is a "packet switching" network. Packet switching refers to the ability of networking equipment to process packets independently from each other. It also means that packets can take different network paths to the same destination, so long as thay all arrive at the destination. Beacuse of packet switching, packets from multiple computers can travel over the same wires in basically any other. This enables multiple connections to take place over the same networking equipment at the same time. As a result, billions of devices can exchange data on the Internet at the same time, instead of just a handful
+3. What is a packet header?
+- A packets header is a "label" of sorts, which provides information about the packet's contents, origin and destination
+- Packets consist of two portions: the header and the payload. The header contains information abnout the packet, such as its origin and destination IP address. The payload is the actual data. Referring back to the phot example, the thousands of packets that make up the image each have a plyload and the payload carries a little piece of the image
+4. Where do packet headers come from?
+- In practice, packets actually have more than one header and each header is used by a different part of the networking process. Packet headers are attached ny certain types of networking protocols
+- a protocol is a standardized way of formatting data so that any computer can interpret the data. Many different protocols make the Internet work. Some of these protocols add headers to packets, most packets that traverse the Internet will include a TCP header and an IP header
+5. What are packet trailers and footers?
+- Packet header go at the front of each packet. Routers, switches, computers, and anything else that processes or receives a packet will see the header first. A packet can also have trailers and footers attached at the end. Like headers, thse contain additional information about the packet
+- Only certain network protocols attach trailers ot footers to packets, most only attach headers ESP (part of the IPsec route) is one example of a network layer protocol that attaches trailers to packets
+6. What is an IP packet?
+- IP is a network layer protocol that has to do with routing. It is used to make sure packets arrive at the correct destination
+- Packets are sometimes defined by the protocol thay are using. An IP header contains important information about where a packet is from (its source IP address), where it is going (destination IP address), how large the packet is and how long network routers should continue to forward the packet before dropping it. It may also indicate whether or not the packet can be fragmented and include information about reassembling fragmented packets
+7. Packets vs. Datagrams
+- "datagram" is a segment of data sent over a packet-switched network. A datagram contains enough information to be routed from its source to its destination. By this destination, an IP packet is one example of a datagram. Essentially, datagram is an alternative term for "packet"
+8. What is network traffic? What is malicious network traffic?
+- Network traffic is a term that refers to the packets that pass through a network, in the same way that automobile traffic refers to the cars and trucks that travel on roads. However, not all packets are good or useful and not all network traffic is safe. Attackers can generate malicious network traffic - data packets designed to compromise or overwhelm a network. This can take vulnerability exploitation or several other forms of cyber attack
+- Cloudfare offers several products that protect against malicious network traffic. Cloudfare Magic Transit, for instance, protects company networks from DDoS attacks at the networklayer by extending the power of the Cloudfare global cloudnetwork to on-premise, hybrid and cloud infrastructure
