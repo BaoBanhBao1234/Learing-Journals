@@ -1,113 +1,125 @@
-1. Tạo List
-- List có thể chứa nhiều kiểu dữ liệu, thay đổi được sau khi tạo, chứa được các phần tử trùng nhau
-2. Truy cập phần tử thông qua index của phần tử đó
-- Index sẽ đi từ 0 đến n
-3. Cắt list bằng slicing
-- list[vị trí bắt đầu : vị trí kết thúc (sẽ bị -1) : bước nhảy]
-- nếu để trống hết như này [::] thì sẽ lấy toàn bộ phần tử có trong list 
-- nếu để step là số âm thì nó sẽ lấy từ phải sang
-4. Thay đổi giá trị của phần tử trong list
-- Thông qua truy cập phần tử bằng index để thay đổi value của phần tử đó
-5. Các phương thức của list
-+ append(): Thêm phần tử vào cuối list
-+ extend(): Thêm nhiều phần tử cùng lúc
-+ insert(index,value): Chèn một phần tử vào vị trí 
-+ remove(): Xóa phần tử bắt gặp đầu tiên theo value
-+ pop(index): xóa theo vị trí và lưu lại value của phần tử đó
-- Nếu để trống index thì nó sẽ xóa phần từ cuối cùng của list
-+ clear(): xóa toàn bộ list
-+ index(): Tìm vị trí của phần tử
-+ count(): Đếm số lần xuất hiện của phần tử
-+ sort(): Sắp xếp trực tiếp List theo chiều tăng dần 
-- Không trả về list mới đã sắp xếp mà sắp xếp trực tiếp trên list hiện có, sắp xếp giảm dần thì sort(reverse = True), theo độ dài chuỗi thì sort(Key = len)
-+ reverse(): Đảo ngược thứ tự trực tiếp List
-+ copy(): sao chép list
-6. Xóa bằng del
-7. Các toán tử với list
-+ Nối hai list bằng dấu '+'
-+ Lặp list bằng dấu '*'
-+ Kiểm tra phần tử bằng 'in' hoặc 'not in'
-+ So sánh 2 list
-8. Các hàm thường dùng với list
-+ len(): số lượng phần từ
-+ sum(): tính tổng
-+ min() và max(): tìm min và max
-+ sorted(): sắp xếp tăng dần và lưu list đã sắp xếp trong một list khác
-+ reversed(): đảo ngược thứ tự list và lưu list đã đảo ngược sang một list khác
-+ any(): kiểm tra ít nhất 1 phần tử đúng
-+ all(): kiểm tra tất cả phần tử đúng 
-9. Duyệt list
-+ Duyệt trực tiếp: for tên biến in list
-+ Duyệt bằng index: for index in range(len(list))
-+ Duyềt bằng enumerate: for index, value in enumerate(list)
-- có thể thêm start = n để khi in ra nó sẽ in ra index + n
-+ Duyệt bằng vòng lặp while: index - 0 và while index < len(list) và i+=1
-10. List comprehension - Tạo list ngắn gọn hơn
-+ [Giá trị đúng + for + tên biến + in range()]
-+ [Giá trị đúng + for + têm biến + in + list + if + điều kiện]
-+ [Giá trị đúng + if + điều kiện + else + Giá trị sai + for + phần tử in + list]
-11. Map() và filter()
-+ Map(): biến đổi từng phần tử
-Ex: list(map(lambda tên biến: giá trị đúng, list))
-+ filter(): lọc phần tử
-Ex: list(filter(lambda tên biến: điều kiện, list))
-12. Duyệt nhiều list bằng zip()
-+ for tên biến1, tên biến2 in zip(list1,list2)
-+ tạo list mới bằng zip(): zip(list1,list2)\
-13. Loại bỏ phần tử trùng nhau
-+ list(set(list))
-+ list(dict.fromkeys(list))
-14. Nhâp list từ bàn phím
-+ tạo một list trống và số lượng phần tử cần thêm
-+ chạy for i in range(số lượng phần tử)
-+ nhập giá trị 
-+ thêm vào cuối bằng append()
-15. Chuyển đổi list sang các kiểu dữ liệu khác
-+ "".join(list): chuyển list thành chuỗi
-+ split() để chuyển chuỗi thành list
-16. Gán nhiều biến bằng unpacking
-Ex: numbers = [1,2,3] a,b,c = numbers #a= 1,b=2,c=3
-    numbers = [1,2,3,4,5] first,*middle,last = numbers #first = 1, middle = [2,3,4], last = 5
-17. Tìm kiếm trong list
-+ Kiểm tra tồn tại
-+ Tìm vị trí
-+ Tìm tất cả vị trí
-18. List 2 chiều - ma trận
-+ Truy cập thông qua hai chỉ số index để lấy được chính xác phần tử cần lấy còn nếu chỉ có 1 index thì nó sẽ trả về một là hàng 2 là dòng
-+ Duyệt ma trận thì dùng 2 vòng for lồng nhau để duyệt 
-+ Tạo ma trận
-19. Sao chép list và lỗi tham chiều
-+ Gán trực tiếp không sao chép
-Ex: a = [1, 2, 3]
+1. Creating Lists
+- Lists can contain values of different types, can be changed after creation, and can contain duplicate elements.
+2. Accessing Elements by Index
+- A list with n elements has non-negative indices from 0 to n - 1.
+3. Slicing Lists
+- Slicing syntax: a[start:stop:step]; the stop position is excluded.
+- Leaving all fields blank, as in a[::], returns a shallow copy containing all elements.
+- A negative step traverses the list from right to left.
+4. Changing List Elements
+- Assign a new value through the element's index.
+5. List Methods
++ append(): Add an element to the end of the list.
++ extend(): Add multiple elements.
++ insert(index, value): Insert an element at a position.
++ remove(value): Remove the first element with the given value.
++ pop(index): Remove and return the element at the given index.
+- If the index is omitted, pop() removes and returns the last element.
++ clear(): Remove all elements.
++ index(value): Find the position of a value.
++ count(value): Count how many times a value occurs.
++ sort(): Sort the list in place in ascending order.
+- a.sort() sorts in place and returns None; use a.sort(reverse=True) for descending order or a.sort(key=len) to sort by length.
++ reverse(): Reverse the list in place.
++ copy(): Create a shallow copy of the list.
+6. Deleting Elements with del
+7. List Operators
++ Use + to concatenate two lists.
++ Use * to repeat a list.
++ Use in or not in to check for an element.
++ Lists can be compared with comparison operators.
+8. Common Functions for Lists
++ len(): Return the number of elements.
++ sum(): Return the sum of numeric elements.
++ min() and max(): Find the minimum and maximum values.
++ sorted(): Return a new list containing the elements in ascending order.
+- reversed(a) returns a reverse iterator; use list(reversed(a)) to create a new list.
++ any(): Return True if at least one element is truthy.
++ all(): Return True if every element is truthy.
+9. Iterating over a List
++ Direct iteration: for item in a
++ Iterate by index: for index in range(len(a))
++ Iterate with enumerate: for index, value in enumerate(a)
+- Pass start=n to enumerate() to begin the indices at n.
+- To iterate with while, initialize an index and update it on each iteration.
+Example:
+    a = [10, 20, 30]
+    index = 0
+    while index < len(a):
+        print(a[index])
+        index += 1
+10. List Comprehensions
+- List comprehensions provide a concise way to create lists.
++ [expression for variable in range()]
++ [expression for variable in iterable if condition]
++ [value_if_true if condition else value_if_false for item in iterable]
+11. map() and filter()
++ map(): Transform each element.
+Example: list(map(lambda item: expression, a))
++ filter(): Keep elements that satisfy a condition.
+Example: list(filter(lambda item: condition, a))
+12. Iterating over Multiple Lists with zip()
++ for item1, item2 in zip(a, b)
+- zip(a, b) returns an iterator; list(zip(a, b)) creates a list of tuples.
+13. Removing Duplicate Elements
+- list(set(a)) removes duplicates but does not guarantee the original order; elements must be hashable.
++ list(dict.fromkeys(a)) removes duplicates while preserving insertion order; elements must be hashable.
+14. Reading a List from User Input
++ Create an empty list and decide how many elements to read.
++ Loop with for i in range(count).
++ Read a value during each iteration.
++ Append each value to the list.
+15. Converting Lists to Other Data Types
+- "".join(a) joins string elements. Convert numeric elements to strings first: "".join(map(str, a)).
++ Use split() to convert a string into a list of substrings.
+16. Assigning Multiple Variables with Unpacking
+Example: numbers = [1, 2, 3]; a, b, c = numbers  # a=1, b=2, c=3
+    numbers = [1, 2, 3, 4, 5]
+    first, *middle, last = numbers  # first=1, middle=[2, 3, 4], last=5
+17. Searching a List
++ Check whether a value exists.
++ Find the index of a value.
++ Find all indices containing a value.
+18. Two-Dimensional Lists (Matrices)
++ Use two indices to access an element. Using one index returns a row.
++ Use nested for loops to traverse a matrix.
++ Create a matrix using nested lists.
+19. List References and Copying
++ Direct assignment does not create a copy; both variables refer to the same list.
+Example:
+    a = [1, 2, 3]
     b = a
     b.append(4)
     print(a)  # [1, 2, 3, 4]
-+ Sao chép nông
-Ex: b = a.copy()
++ Create a shallow copy:
+Example:
+    b = a.copy()
     b = list(a)
-    b = a[:]   
-+ List lồng nhau
-Ex: a = [[1, 2], [3, 4]]
+    b = a[:]
++ A shallow copy of a nested list still shares its inner lists.
+Example:
+    a = [[1, 2], [3, 4]]
     b = a.copy()
     b[0][0] = 99
-    print(a)  # [[99, 2], [3, 4]] 
-hoặc
+    print(a)  # [[99, 2], [3, 4]]
+- Use copy.deepcopy() to recursively copy nested objects.
+Example:
     import copy
     b = copy.deepcopy(a)
-20. Sắp xếp nâng cao
-+ sắp xếp cho tuple: cần có key lambda tên biến: tên list[index]
-21. List dùng như stack
-+ append() xong lại pop()
-22. List dùng như quene 
-+ append() xxong pop(0) đối với list không quá lớn
-+ deque và popleft() đối với list lớn
-23. Độ phức tạp cơ bản
-+ Truy cập: O(1)
-+ Thêm cuối: trung bình O(1)
-+ pop(): O(1)
-+ Chèn đầu: O(n)
-+ Xóa đầu pop(0): O(m)
-+ Tìm bằng in: O(n)
+20. Advanced Sorting
++ To sort tuples by an item, provide a key such as key=lambda item: item[index].
+21. Using a List as a Stack
++ Use append() to push an item and pop() to remove the last item.
+22. Using a List as a Queue
++ For a small queue, append() and pop(0) can be used; pop(0) shifts the remaining elements.
++ For a larger queue, use collections.deque and popleft().
+23. Basic Time Complexities
++ Index access: O(1)
++ Append at the end: O(1) amortized
++ pop() from the end: O(1)
++ Insert at the beginning: O(n)
+- Removing the first item with pop(0) takes O(n), where n is the list length, because the remaining items must shift.
++ Membership test with in: O(n)
 + index(): O(n)
 + remove(): O(n)
-+ sort(): O(nlogn)
++ sort(): O(n log n)

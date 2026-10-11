@@ -2,7 +2,7 @@
 - If we want the computers in the same environment to communicate, we can use a switch device
 - We have CAT6: 10 Gbps,250MHz, distance <55m
           CAT6A: 10Gbps,500MHz, distance <100m
-          CAT7/CAT8: 40-100Gbps,600-2000Mhz, distance <30m
+- Cat 7 and Cat 8 are different cable categories and should not share one specification. Cat 8 supports 25/40GBASE-T over channels up to 30 m and is specified up to 2000 MHz.
 *CAT = CATEGORY
 - Fiber optic cables are much faster than copper cablesin general
 - We always use cables to connect computers to the switch. A switch cannot use wireless technology

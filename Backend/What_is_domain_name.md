@@ -2,7 +2,7 @@
 - Structure of Domain Name
 + A domain name has a simple structure made of several parts separated by dots and read from right to left
 + Each of these parts provides specific information about the whole domain name
-- TLS (Top-Level Domain)
+- TLD (Top-Level Domain). TLS stands for Transport Layer Security.
 + TLDs tell users the general purpose of the service behind the domain name. The most geneeic TLDs (.com, .org, .net, ...) don't require web services to meet any particular criteria, but some TLDs enforce stricter policies so it is clearer what them purpose is
 Ex: Local TLDs: .us, .fr, .se can require the service to be provided in a given language or hosted in a certain country - tehy are supposted to indicate a resource in a particular language or country
     TLDs containing .gov are only allowed to be used by government departments
@@ -24,10 +24,10 @@ Ex: Local TLDs: .us, .fr, .se can require the service to be provided in a given 
 - - Go to a domain name registrar's website\
 - - Usually there is a prominent "GET" domain name call to action click on it
 - - Fill out the form with all required details. Make sure, especially, that you have not misspelled your desired domain name
-- - The registrar will let you know when the domain name is properly registered. Within a few hours, all DNS servers will have received your DNS information 
+- The registrar confirms domain registration. DNS changes may not appear immediately at every resolver because older records remain cached according to their TTL; not every DNS server receives a copy.
 + DNS refreshing
-- - DNS databases are stored on every DNS server worldwide and all these servers refer to a few specail servers called "authoritative naem servers" or "top-level DNS servers" - there are like the boss servers that manage the system 
-- - Whenever your registrar creates or updates any information for a given domain, the information must be refreshed in every DNS database. Each DNS server that knows about a given domain stores the information for some time before it is automatically invalidated and the refreshed (the DNS server queries an authoritative server and fetches the updated information from it). Thus, it takes some time for DNS servers that know about this doamin name to get the up-to-date information
+- DNS is hierarchical and distributed. An authoritative server answers for its zones; a resolver queries servers and caches results. TLD servers typically provide referrals to the servers responsible for a domain.
+- Resolvers cache records according to their TTL. When a record expires and is needed again, the resolver performs a lookup to obtain current information.
 2. What does a DNS request work?
 - Type a domain name in your browser's location bar
 - your browser asks your computer if it already recognizes the IP address identified by this domain name (using a local DNS cache). If it does, the name is translated to the IP address and the browser negotiates contents with the web server. End of story

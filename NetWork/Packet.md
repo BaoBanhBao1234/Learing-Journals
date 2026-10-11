@@ -7,12 +7,12 @@
 - Packets consist of two portions: the header and the payload. The header contains information abnout the packet, such as its origin and destination IP address. The payload is the actual data. Referring back to the phot example, the thousands of packets that make up the image each have a plyload and the payload carries a little piece of the image
 4. Where do packet headers come from?
 - In practice, packets actually have more than one header and each header is used by a different part of the networking process. Packet headers are attached ny certain types of networking protocols
-- a protocol is a standardized way of formatting data so that any computer can interpret the data. Many different protocols make the Internet work. Some of these protocols add headers to packets, most packets that traverse the Internet will include a TCP header and an IP header
+- A protocol specifies how data is exchanged and formatted. An IP packet has an IP header; its payload may carry TCP, UDP, ICMP, or another protocol.
 5. What are packet trailers and footers?
 - Packet header go at the front of each packet. Routers, switches, computers, and anything else that processes or receives a packet will see the header first. A packet can also have trailers and footers attached at the end. Like headers, thse contain additional information about the packet
 - Only certain network protocols attach trailers ot footers to packets, most only attach headers ESP (part of the IPsec route) is one example of a network layer protocol that attaches trailers to packets
 6. What is an IP packet?
-- IP is a network layer protocol that has to do with routing. It is used to make sure packets arrive at the correct destination
+- IP provides addressing and best-effort datagram delivery across networks. It does not guarantee delivery or arrival order.
 - Packets are sometimes defined by the protocol thay are using. An IP header contains important information about where a packet is from (its source IP address), where it is going (destination IP address), how large the packet is and how long network routers should continue to forward the packet before dropping it. It may also indicate whether or not the packet can be fragmented and include information about reassembling fragmented packets
 7. Packets vs. Datagrams
 - "datagram" is a segment of data sent over a packet-switched network. A datagram contains enough information to be routed from its source to its destination. By this destination, an IP packet is one example of a datagram. Essentially, datagram is an alternative term for "packet"

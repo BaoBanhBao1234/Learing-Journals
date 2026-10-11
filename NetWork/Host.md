@@ -15,6 +15,6 @@
 - Remote Host
 4. What is a host vs. Server difference?
 - Host: the Adaptable custodian: Resource Sharing, Two-way communication, Different types
-- Server: The expert suplier: Service Delivery, One-way communication, Specialized software and hardware
+- A server provides services and can both send and receive data. Dedicated hardware is not always required. A host can act as both a client and a server.
 5. Host name usage in computer network
 - Because it corresponds to the network's hosting device, the host name is sometimes applied in computer networking. In place of the numerical IP address, it swiftly access the device. It facilitates the use's ability to recall and access network devices. The host name eliminates the need for users to memorize than IP address

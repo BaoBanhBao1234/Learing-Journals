@@ -25,7 +25,7 @@
 - sudo systemctl restart nginx: restart the service
 - sudo systemctl enable nginx: enable startup at boot
 - systemctl status nginx: check service status
-- sudo journalctl: -u nginx: Read service logs
+- sudo journalctl -u nginx: View logs for the nginx service.
 - Starting a service and enabling it at boot are separate actions
 Ex: sudo systemctl enable --now nginx
 -> If service dont run, check status and logs to find reason

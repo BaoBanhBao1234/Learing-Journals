@@ -21,43 +21,43 @@
 - - Arithmetic Logic Unit (ALU): Executes mathematical computations (such as integer addition and substraction) and boolean logic operations (such as bitwise AND, OR, XOR, and comparisons)
 - - Internal Registers: Extremely fast, on-chip storage location directly accessible by the ALU and CU within a single clock cycle 
 2. Window commands
-- ipconfig: xem và quản lý cấu hình mạng
-- ipconfig /all: xem chi tiết mạng
-- findstr ... tìm kiếm
-- ipconfig /release: khắc phục bằng giải phóng IP hiện tại
-- ipconfig /renew: xin cấp lại IP mới từ router
-- ipconfig /displaydns: hiển thị cache DNS
-- clip: sao chép cache
-- ipconfig /flushdns: xóa bộ nhớ đệm
-- nslookup: tra cứu và truy vấn hệ thống phân giải dns
-- cls: xóa màn hình
-- getmac /v: hiển thị địa chỉ mac
-- pơercfg /energy: đánh giá hiệu suất năng lượng và kiểm tra thời lượng pin
-- pơercfg /batteryreport: kiểm tra độ chai pin và lịch sử sạc
-- asoc: xem hoặc thay đổi mối liên kết định dạng với tập tin
-- chkdsk /f: quét, phát hiện , tự động sửa lỗi tâpk tin ổ cứng
-- chkdsk /r: quét sâu và mạnh
-- sfc /scannow: quét toàn bộ tập tin, tự thay thế tệp lỗi
-- DISM /Online /Cleanup /CheckHealth
-- DISM /Online /Cleanup /ScanHealth
-- DISM /Online /Cleanup /RestoreHealth
-- táklist /findstr script 
-- tákill /f: ép dừng ngay lập tức các tiến trình
-- netsh: xem, cấu hình và quản lý toàn bộ các thiết lập mạng
-- netsh interface show interface: hiển thị card mạng
-- netsh interface ip show address /findstr "IP Address"
-- netsh interdace ip show dnsservers: hiển thị DNS servers
-- netsh firewall set allprofiles state off : tắt firewall
-- netsh firewall set allprofiles state on : bật firewall
-- ping: kiểm tra có kết nối mạng, đo tốc độ
-- ping -t: kiểm tra mạng chập chờn, đo độ ổn định
-- tracert: theop dõi và hiển thị lộ trình
-- tracert -d: hiển thị địa chỉ ip chuẩn
-- netstat: hiển thị toàn bộ kết nối mạng
-- netstat -af: hiển thị DNS hoàn chỉnh
-- néttat -o: bổ sung PID
-- néttat -e -t 5: thống kê Ethernet
-- route print: hiển thị bảng định tuyến
-- route add: thêm route
-- route delete: xóa route
-- shutdown: tắt máy, reset máy, reset và lưu hoạt động, sleep, sign out
+- ipconfig: View and manage network configuration.
+- ipconfig /all: Display detailed network configuration.
+- findstr: Search for text in command output or files.
+- ipconfig /release: Release the current DHCP lease.
+- ipconfig /renew: Request a new DHCP lease.
+- ipconfig /displaydns: Display the DNS resolver cache.
+- clip: Copy command output to the clipboard.
+- ipconfig /flushdns: Clear the DNS resolver cache.
+- nslookup: Query DNS records and name-resolution servers.
+- cls: Clear the Command Prompt screen.
+- getmac /v: Display detailed MAC address information.
+- powercfg /energy:  Analyze energy efficiency and related issues.
+- powercfg /batteryreport: Generate a battery usage and capacity report.
+- assoc:  View or change file-extension associations in CMD.
+- chkdsk /f: Find and fix file-system errors.
+- chkdsk /r: Locate bad sectors and attempt to recover readable data; this also performs /f checks.
+- sfc /scannow: Scan and repair protected Windows system files.
+- DISM /Online /Cleanup-Image /CheckHealth: Check previously recorded image corruption.
+- DISM /Online /Cleanup-Image /ScanHealth: Scan the Windows component store for corruption.
+- DISM /Online /Cleanup-Image /RestoreHealth: Repair Windows component-store corruption.
+- tasklist | findstr "script": Filter the process list for matching text.
+- taskkill /F /PID <PID>: Force termination of the specified process; replace <PID> with its process ID.
+- netsh: View and configure network settings.
+- netsh interface show interface: List network interfaces.
+- netsh interface ip show address | findstr "IP Address": Filter the output by its English label.
+- netsh interface ip show dnsservers: Display configured DNS servers.
+- netsh advfirewall set allprofiles state off: Disable Windows Firewall for all profiles.
+- netsh advfirewall set allprofiles state on: Enable Windows Firewall for all profiles.
+- ping checks ICMP responses and round-trip times, not download/upload throughput. Missing replies can also result from ICMP being blocked.
+- ping -t: Continuously send ICMP echo requests to observe connectivity over time.
+- tracert: Trace the route to a destination.
+- tracert -d: Trace the route without resolving router addresses to hostnames.
+- netstat: Display network connections and listening ports.
+- netstat -af: -a shows connections and listening ports; -f shows fully qualified destination names when resolvable.
+- netstat -o: Show the PID of the process owning each connection.
+- netstat -e 5: Display Ethernet statistics every 5 seconds.
+- route print: Display the IP routing table.
+- route add: Add a route to the routing table.
+- route delete: Remove a route from the routing table.
+- shutdown: Shut down or restart the computer, or sign out, depending on the options used.

@@ -1,6 +1,6 @@
 1. Server
 - A server is a hardware or software system that processor reuests and delivers data, services, or applications to client devices over internal networks or the Internet
-- Servers are built from specialized components - such as CPUs, GPUs, memory, storage, networking and power systems - designed to handle high-volume, continuous processing
+- Servers can run on ordinary computers, dedicated hardware, or virtual machines, depending on the workload.
 - Organizations can choose from many server types and deployment models, including physical, virtual, cloud, and AI-optimized servers, based on workload, scalability adn budget needs: Organizations nd individuals may host their servers:
 + In-house/ on premises
 + In large, shared data centers containing rooms full of servers
@@ -38,17 +38,17 @@
 + Other software solutions used within organizations
 - Application servers run on many OSs, including Windows, Linux, Mainframe, Midraneg, Unix, Containers, and other platforms. Apllication servers are often clustered to process large volumes of users requests sent to a central location 
 10. Internet servers
-- Servers that route requests and responses between clients and servers across local networks and the Internet
+- Internet servers provide services over the Internet; routers forward packets between networks.
 - Internet servers include:
 + DHCP servers (Dynamic Host Configuration Protocol) automatically assign IP address and network configuration settings to clients and servers
-+ DNS servers (Domain Name System) resolve user-friendly domain names (Web URLs) into Internet IP addresses to enable efficient routing for Internet traffic
-+ Proxy servers: Gateway servers that protect client traffic by hiding a requester's true IP address and forwarding traffic to its destination address. Proxy servers enhance security in many ways including hiding user IP addresses (locations), from bad actions, supporting load balancing and caching and compressing traffic
+- DNS servers answer DNS-record queries, including A/AAAA records that map names to IP addresses. A domain name is only one part of a URL; DNS does not resolve entire URLs.
+- A proxy forwards requests or traffic as an intermediary; IP hiding, caching, load balancing, and security depend on its type and configuration.
 + Plain and secure FTP (File Transfer Protocol) servers facilitate file trasfers betwwen computers 
-+ Virtual Machines (VM): IT teams use hypervisor software or virtual machine monitor (VMM) to build virtual machines within a single device. A hypervisor can manage hundreds of virtual machines on single piece of hardware, virtualizing entire sacks of physical servers
+- A hypervisor creates and manages virtual machines. The number of VMs it can run depends on hardware capacity and each VM's resource requirements.
 11. AI servers
 - Ai servers use GPUs or Google's Tensor Processing Units (TPUs) specilized high-speed interconnections to allow multiple GPUs to communicate rapidly
 - AI servers can execute complex modeling, language-based tasks, including data analysis, pattern recognition, decision-making processes, output generation and more
-12. Security sẻvers:
+12. Server Security:
 - Perform specialized security processing to protect data and networks from unauthorized access, cyber attacks, data breaches, and more. Security servers provide protection for functions such as firewalls, intrusion detection/prevention authentication, and other services 
 13. How to choose the rigth server
 - Server requirements: select appropriate hardware and OS tailored to your applications. Plan for capacity and scalability to maintain performance and accommodate future growth
