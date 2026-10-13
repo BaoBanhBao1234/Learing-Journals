@@ -123,3 +123,27 @@ Example:
 + index(): O(n)
 + remove(): O(n)
 + sort(): O(n log n)
+
+24. Arrays as a Data Structure
+- An array is an indexed sequence of elements. Traditional arrays usually store elements of the same data type in contiguous memory.
+- The index identifies an element's position. In a zero-based array, the first element is at index 0.
+- If elements occupy a fixed number of bytes, a program can calculate an element's address from the base address, index, and element size. This is why accessing an element by index is O(1).
+- Arrays are useful when a program needs to store related values and access them by position.
+
+25. Static and Dynamic Arrays
+- A **static array** has a fixed capacity decided when it is created. Its capacity cannot normally be changed in place.
+- A **dynamic array** can grow when more elements are added. When its current storage is full, an implementation may allocate a larger block and copy the elements into it.
+- Resizing can take O(n), but dynamic arrays typically reserve extra capacity so repeated appends take O(1) amortized time.
+- Python's built-in `list` behaves as a dynamic array, but it is not the same as a low-level typed array: a Python list can contain values of different types, and CPython lists store references to Python objects.
+- Other languages and libraries may provide typed arrays with different memory and resizing behavior.
+
+26. Array Operations and Time Complexity
++ Access an element by index: O(1).
++ Search for a value without a known index: O(n) in the general case, because elements may need to be checked one by one.
++ Traverse all elements: O(n).
++ Insert or delete at the beginning or middle: O(n), because later elements may need to shift.
++ Append to a dynamic array: O(1) amortized; an individual append that triggers resizing can take O(n).
+- Big O describes how an operation's time or space requirements grow as the input size grows; it does not specify an exact runtime in seconds.
+
+27. Source
+- codebasics: Arrays - Data Structures & Algorithms Tutorials in Python #3 https://www.youtube.com/watch?v=gDqQf4Ekr2A
