@@ -1,35 +1,35 @@
 ﻿1. What is a Domain Name?
-- A domain name is a human-readable name used to locate an Internet service, such as a website.
-- Computers communicate using IP addresses. DNS (Domain Name System) lets people use domain names instead of memorizing numerical IP addresses.
-- A domain name is not the same as a website or a web server. It is a name that DNS can resolve to information used to reach a service.
+- ==A domain name is a human-readable name used to locate an Internet service, such as a website.==
+- ==Computers communicate using IP addresses. DNS (Domain Name System) lets people use domain names instead of memorizing numerical IP addresses.==
+- ==A domain name is not the same as a website or a web server. It is a name that DNS can resolve to information used to reach a service.==
 
 2. Domain Name vs. URL
-- A URL is the full address of a resource. It can include a scheme, domain name, port, path, query string, and fragment.
-- Example: in `https://developer.mozilla.org/en-US/docs/`, `https` is the scheme, `developer.mozilla.org` is the domain name, and `/en-US/docs/` is the path.
-- A domain name is one part of a URL. The domain name alone does not identify a particular page or specify the connection scheme.
+- ==A URL is the full address of a resource. It can include a scheme, domain name, port, path, query string, and fragment.==
+- Example: in `https://developer.mozilla.org/en-US/docs/`, `==https` is the scheme==, ==`developer.mozilla.org` is the domain name==, and ==`/en-US/docs/` is the path.==
+- ==A domain name is one part of a URL. The domain name alone does not identify a particular page or specify the connection scheme.==
 - `www` is commonly used as a subdomain, but it is optional and is not required for a website to work.
 
 3. Structure of a Domain Name
-- Domain names consist of one or more labels separated by dots and are read from right to left, from the broader DNS level to more specific labels.
+- ==Domain names consist of one or more labels separated by dots and are read from right to left, from the broader DNS level to more specific labels.==
 - Example: `developer.mozilla.org`
-+ `.org` is the top-level domain (TLD).
-+ `mozilla` is the second-level label under `.org`.
-+ `developer` is a subdomain of `mozilla.org`.
-- A domain name does not need to contain exactly three labels. For example, `mozilla.org` and `developer.mozilla.org` are both domain names.
-- Common TLD categories include generic TLDs such as `.com`, `.org`, and `.net`, and country-code TLDs such as `.uk` and `.jp`.
-- Some TLDs or domain labels have registration rules; the rules depend on the particular TLD and its registry.
++ ==`.org` is the top-level domain (TLD).==
++ ==`mozilla` is the second-level label under `.org`.==
++ ==`developer` is a subdomain of `mozilla.org`.==
+- ==A domain name does not need to contain exactly three labels==. For example, `mozilla.org` and `developer.mozilla.org` are both domain names.
+- ==Common TLD categories include generic TLDs== such as `.com`, `.org`, and `.net`, ==and country-code TLDs== such as `.uk` and `.jp`.
+- ==Some TLDs or domain labels have registration rules; the rules depend on the particular TLD and its registry.==
 
 4. How DNS Uses a Domain Name
-- When a user enters a domain name, the device first checks whether it already has a usable DNS answer in its cache.
-- If it does not, a DNS resolver looks up the name through the DNS hierarchy and obtains records from the authoritative DNS servers for that domain.
-- DNS records can provide IP addresses and other service information. The resolver caches answers for a limited time, so updates may not appear everywhere immediately.
-- After the device has the information needed to reach the service, it can connect to the server and request the resource.
-- DNS maps names to network information; it does not store or deliver the website's page content.
+- ==When a user enters a domain name, the device first checks whether it already has a usable DNS answer in its cache.==
+- ==If it does not, a DNS resolver looks up the name through the DNS hierarchy and obtains records from the authoritative DNS servers for that domain.==
+- ==DNS records can provide IP addresses and other service information. The resolver caches answers for a limited time, so updates may not appear everywhere immediately.==
+- ==After the device has the information needed to reach the service, it can connect to the server and request the resource.==
+- ==DNS maps names to network information; it does not store or deliver the website's page content.==
 
 5. Domain Registration
-- A domain name must be available and registered before one person or organization can use it under the applicable rules.
-- A registrar is a company or organization that lets customers register and manage domain names. A registry maintains the registration database for a TLD.
-- Registering a domain does not mean buying it permanently. The registrant receives the right to use it for a defined period and must renew it to keep using it.
+- ==A domain name must be available and registered before one person or organization can use it under the applicable rules.==
+- ==A registrar is a company or organization that lets customers register and manage domain names. A registry maintains the registration database for a TLD.==
+- ==Registering a domain does not mean buying it permanently. The registrant receives the right to use it for a defined period and must renew it to keep using it.==
 - When choosing a registrar, review the registration price, renewal price, renewal and expiration policies, and account security options.
 - After a domain is registered or its DNS settings change, cached DNS answers may remain in use until their time-to-live (TTL) expires.
 
